@@ -12,6 +12,7 @@ const createDate = function (tanggal, second) {
   if (second) {
     let elementDate = tanggal[2]
     let dateString = Date.parse(elementDate)
+    dateString = Math.round(dateString/1000)
 
     return dateString.toString();
   } else {
@@ -20,6 +21,7 @@ const createDate = function (tanggal, second) {
       let elementDate = tanggal[index];
 
       let dateString = Date.parse(elementDate)
+      dateString = Math.round(dateString/1000);
 
       arrDate.push(dateString.toString())
     }
