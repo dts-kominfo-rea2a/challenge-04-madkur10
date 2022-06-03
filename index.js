@@ -8,25 +8,22 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = function (tanggal, second) {
-  if (second) {
-    let elementDate = tanggal[2]
+const createDate = function (param1, param2 = null) {
+  arrDate = [];
+  for (let tanggal = 0; tanggal < param1.length; tanggal++) {
+    let elementDate = param1[tanggal];
+
     let dateString = Date.parse(elementDate)
-    dateString = Math.round(dateString/1000)
+    dateString = Math.round(dateString / 1000);
 
-    return dateString.toString();
-  } else {
-    arrDate = [];
-    for (let index = 0; index < tanggal.length; index++) {
-      let elementDate = tanggal[index];
-
-      let dateString = Date.parse(elementDate)
-      dateString = Math.round(dateString/1000);
-
-      arrDate.push(dateString.toString())
-    }
-    return arrDate.sort().join('-');
+    arrDate.push(dateString.toString())
   }
+
+  if (param2) {
+    return arrDate[param2].toString();
+  }
+
+  return arrDate.sort().join('-');
 };
 
 // ! JANGAN DIMODIFIKASI
