@@ -14,7 +14,7 @@ const createDate = function (param1, param2 = null) {
     let elementDate = param1[tanggal];
 
     let dateString = Date.parse(elementDate)
-    dateString = Math.round(dateString / 1000);
+    dateString = dateString / 1000;
 
     arrDate.push(dateString.toString())
   }
