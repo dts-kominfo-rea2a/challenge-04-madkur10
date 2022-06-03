@@ -25,7 +25,7 @@ const createDate = function (tanggal, second) {
 
       arrDate.push(dateString.toString())
     }
-    return arrDate.join('-');
+    return arrDate.sort().join('-');
   }
 };
 
