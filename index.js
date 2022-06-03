@@ -12,11 +12,11 @@ const createDate = function (dataDate, dataPosisi = null) {
   arrDate = [];
   for (let tanggal = 0; tanggal < dataDate.length; tanggal++) {
     let elementDate = dataDate[tanggal];
-    let dateString = (Date.parse(elementDate)/1000);
+    let dateString = (Date.parse(elementDate)/1000).toString();
     arrDate.push(dateString)
   }
 
-  if (dataPosisi) {
+  if (dataPosisi != null) {
     return arrDate[dataPosisi].toString();
   }
 
